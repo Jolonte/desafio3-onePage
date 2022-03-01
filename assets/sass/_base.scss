@@ -1,0 +1,57 @@
+// import
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Merriweather&display=swap');
+
+// colors
+$purple: #6C63FF;
+$purple-2: #4F70E8;
+$purple-3: #804FE8;
+$purple-light: #D7D4FF;
+$white: #ffffff;
+$white-200: #F9F9F9;
+$gray: #555555;
+$gray-dark: #2A2A2A;
+
+// mixins
+@mixin flex($flex, $flow1, $flow2) {
+    flex: $flex;
+    display: flex;
+    flex-flow: $flow1 $flow2;
+}
+
+@mixin button {
+    background-color: $purple;
+    color: $white;
+    height: 3.125rem;
+    font-size: 1.25rem;
+    border-radius: 0.3rem;
+    border: none;
+}
+
+// html
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    @include flex(auto, column, wrap);
+    font-display: swap;
+}
+
+h1 {
+    font-size: 1.625rem;
+    color: $gray-dark;
+    font-family: 'Merriweather', serif;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: $gray-dark;
+    font-family: 'Merriweather', serif;
+}
+
+p {
+    color: $gray;
+    font-size: 1.188rem;
+}

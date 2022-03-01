@@ -1,0 +1,19 @@
+header {
+    @include flex(1 1 35rem, row, wrap);
+    max-height: 35rem;
+    padding: 0 6rem 0 6rem;
+    background-color: $purple-light;
+}
+
+main {
+    @include flex(auto, row, wrap);
+    padding: 9.375rem 6.063rem 9.375rem 6.063rem;
+}
+
+footer {
+    @include flex(1 1 46.875rem, column, wrap);
+    align-items: center;
+    justify-content: center;
+    background-color: $purple-light;
+    gap: 3.75;
+}
