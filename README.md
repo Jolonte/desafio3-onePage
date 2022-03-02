@@ -2,7 +2,7 @@
  
 meta tags
 icons
-typeform
+formsubmit
 unsplash api
 google fonts
 

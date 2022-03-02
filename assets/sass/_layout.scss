@@ -11,9 +11,9 @@ main {
 }
 
 footer {
-    @include flex(1 1 46.875rem, column, wrap);
+    @include flex(1 1 auto, column, wrap);
     align-items: center;
     justify-content: center;
     background-color: $purple-light;
-    gap: 3.75;
+    gap: 3.75rem;
 }

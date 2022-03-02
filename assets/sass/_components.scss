@@ -8,20 +8,17 @@
 
     &__p {
         font-family: 'Lato', sans-serif;
-        min-width: 24.313rem;
+        min-width: 30rem;
         max-width: 1rem;
         margin-bottom: 2.813rem;
     }
 
     &__button {
-        @include button();
         max-width: 9.688rem;
+
         &:hover {
-            cursor: pointer;
-            background-color: $purple-2;
-        }
-        &:active {
-            background-color: $purple-3;
+            transform: scale(1.05);
+            transition: all 0.2s;
         }
     }
 
@@ -69,38 +66,67 @@
 .footer {
     &__h1 {
         font-size: 2rem;
+        margin-top: 5.313rem;
     }
 
     &__form {
-        @include flex(auto, column, wrap)
+        @include flex(auto, column, wrap);
+        gap: 0.938rem;
     }
 
     &__input {
-        
+        @include button($white);
+        min-width: 29.375rem;
+        font-size: 1.125rem;
+        color: $gray-dark;
+        padding: 1rem;
+
+        &:focus {
+            outline: none;
+            background-color: $pink;
+        }
+    }
+
+    &__textarea {
+        @include button($white);
+        min-height: 10.313rem;
+        padding: 1rem;
+        color: $gray-dark;
+        resize: none;
+        outline: none;
+        margin-bottom: 1.875rem;
+
+        &:focus {   
+            background-color: #FDE3FD;
+        }
+    }
+
+    &__button {
+        margin-bottom: 5rem;
     }
 }
 
 // id's
-#card_1 {
+#cover_1 {
     background-color: #FF6363;
 }
 
-#card_2 {
+#cover_2 {
     background-color: #63ECFF;
 }
 
-#card_3 {
+#cover_3 {
     background-color: #F363FF;
 }
 
-#card_4 {
+#cover_4 {
     background-color: #63FF73;
 }
 
-#card_5 {
+#cover_5 {
     background-color: #FFDD63;
 }
 
-#card_6 {
+#cover_6 {
     background-color: #6663FF;
 }

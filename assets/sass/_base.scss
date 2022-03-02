@@ -6,6 +6,7 @@ $purple: #6C63FF;
 $purple-2: #4F70E8;
 $purple-3: #804FE8;
 $purple-light: #D7D4FF;
+$pink: #FDE3FD;
 $white: #ffffff;
 $white-200: #F9F9F9;
 $gray: #555555;
@@ -18,8 +19,8 @@ $gray-dark: #2A2A2A;
     flex-flow: $flow1 $flow2;
 }
 
-@mixin button {
-    background-color: $purple;
+@mixin button($color) {
+    background-color: $color;
     color: $white;
     height: 3.125rem;
     font-size: 1.25rem;
@@ -54,4 +55,25 @@ h2 {
 p {
     color: $gray;
     font-size: 1.188rem;
+    font-family: Lato, sans-serif;
+}
+
+button {
+    @include button($purple);
+    &:hover {
+        cursor: pointer;
+        background-color: $purple-2;
+    }
+    &:active {
+        background-color: $purple-3;
+    }
+}
+
+textarea {
+    font-family: Lato, sans-serif;
+}
+
+*::placeholder {
+    color: rgba(110, 114, 117, 0.74);
+    font-family: Lato, sans-serif;
 }

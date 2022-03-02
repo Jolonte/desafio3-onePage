@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <!-- metatags -->
     <meta charset="UTF-8">
@@ -28,9 +28,9 @@
 <body>
     <header>
         <div class="header__content">
-            <h1 class="header__h1">Lorem ipsum dolor<br>sit amet</h1>
-            <p class="header__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu massa sit amet augue consectetur ullamcorper non ac massa.</p>
-            <button class="header__button">Botão</button>
+            <h1 class="header__h1">Online gifts photo<br>generator</h1>
+            <p class="header__p">This site uses the public Unsplash API to generate photographs with the gift filter. Unsplash is a website dedicated to sharing photographs under the Unsplash license.</p>
+            <button class="header__button">Generate</button>
         </div>
         <div class="header__content">
             <img class="header__img" src="/assets/img/gift.svg" alt="gift-box">
@@ -39,42 +39,42 @@
     <main>
         <div class="main__content">
             <div class="main__card">
-                <div class="main__card__cover" id="card_1"></div>
+                <div class="main__card__cover" id="cover_1"></div>
                 <div class="main__card__info">
                     <h2>Título do card</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in neque et nisl.</p>
                 </div>
             </div>
             <div class="main__card">
-                <div class="main__card__cover" id="card_2"></div>
+                <div class="main__card__cover" id="cover_2"></div>
                 <div class="main__card__info">
                     <h2>Título do card</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in neque et nisl.</p>
                 </div>
             </div>
             <div class="main__card">
-                <div class="main__card__cover" id="card_3"></div>
+                <div class="main__card__cover" id="cover_3"></div>
                 <div class="main__card__info">
                     <h2>Título do card</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in neque et nisl.</p>
                 </div>
             </div>
             <div class="main__card">
-                <div class="main__card__cover" id="card_4"></div>
+                <div class="main__card__cover" id="cover_4"></div>
                 <div class="main__card__info">
                     <h2>Título do card</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in neque et nisl.</p>
                 </div>
             </div>
             <div class="main__card">
-                <div class="main__card__cover" id="card_5"></div>
+                <div class="main__card__cover" id="cover_5"></div>
                 <div class="main__card__info">
                     <h2>Título do card</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in neque et nisl.</p>
                 </div>
             </div>
             <div class="main__card">
-                <div class="main__card__cover" id="card_6"></div>
+                <div class="main__card__cover" id="cover_6"></div>
                 <div class="main__card__info">
                     <h2>Título do card</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in neque et nisl.</p>
@@ -83,13 +83,19 @@
         </div>
     </main>
     <footer>
-        <h1 class="footer__h1">Entre em contato</h1>
+        <h1 class="footer__h1">Get in touch</h1>
         <form action="https://formsubmit.co/vinicius.nevesco@gmail.com" method="POST" class="footer__form">
-            <input class="footer__input" type="text" name="name" placeholder="Nome" required>
+            <input class="footer__input" type="text" name="name" placeholder="Name" required>
             <input class="footer__input" type="email" name="email" placeholder="E-mail" required>
-            <input class="footer__input" type="tel" name="phone" placeholder="Telefone" pattern="[0-9]{2}-[0-9]{9}" required>
-            <textarea name="message" cols="30" rows="10" required></textarea>
-            <button type="submit">Enviar mensagem</button>
+            <input class="footer__input" type="tel" name="phone" placeholder="Telephone: (ddd)123456789" pattern="[0-9]{2}[0-9]{9}" required>
+            <textarea class="footer__textarea" name="message" placeholder="Message..." cols="30" rows="10" required></textarea>
+
+            <!-- formsubmit -->
+            <input type="hidden" name="_template" value="box">
+            <input type="hidden" name="_subject" value="Gift Photos!">
+            <input type="hidden" name="_autoresponse" value="I see you've interacted with one of my sites, thanks! I'm very interested in technology, so much so that I'm a junior web developer and programming student. If you want to see more apps I created: https://vinicius-costa-links.vercel.app/.">
+
+            <button class="footer__button" type="submit">Send message</button>
         </form>
     </footer>
 </body>
