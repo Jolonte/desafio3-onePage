@@ -4,6 +4,27 @@
         justify-content: center;
         max-width: 50%;
         gap: 1.094rem;
+        
+        @include smMobile {
+            @include flex(auto, column, nowrap);
+            min-width: 100%;
+            max-height: 50%;
+            gap: 1rem;
+        }
+
+        @include mobile {
+            @include flex(auto, column, nowrap);
+            min-width: 100%;
+            max-height: 50%;
+            gap: 1rem;
+        }
+
+        @include laptop {
+            @include flex(auto, column, nowrap);
+            min-width: 100%;
+            max-height: 50%;
+            gap: 1rem;
+        }
     }
 
     &__p {
@@ -11,19 +32,58 @@
         min-width: 30rem;
         max-width: 1rem;
         margin-bottom: 2.813rem;
+
+        @include smMobile {
+            min-width: 100%;
+            margin-bottom: 0.5rem;
+            font-size: 1.125rem;
+        }
+
+        @include mobile {
+            min-width: 100%;
+            margin-bottom: 0.5rem;
+            font-size: 1.125rem;
+        }
+
+        @include desktop {
+            min-width: 90%;
+            margin-bottom: 0.5rem;
+            font-size: 1.125rem;
+        }
     }
 
     &__button {
         max-width: 9.688rem;
-
         &:hover {
             transform: scale(1.05);
             transition: all 0.2s;
+
+            @include smMobile {
+                transform: none;
+                transition: none;
+            }
+
+            @include mobile {
+                transform: none;
+                transition: none;
+            }
         }
     }
 
     &__img {
         height: 25rem;
+
+        @include smMobile {
+            height: 10rem;
+        }
+
+        @include mobile {
+            height: 10rem;
+        }
+
+        @include desktop {
+            height: 20rem;
+        }
     }
 }
 
@@ -34,19 +94,60 @@
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
         gap: 6.938rem;
+
+        @include smMobile {
+            @include flex(auto, column, nowrap);
+            gap: 1.875rem;
+        }
+
+        @include mobile {
+            @include flex(auto, column, nowrap);
+            gap: 1.875rem;
+        }
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        @include laptop {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        @include desktop {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
     }
 
     &__card {
         @include flex(auto, column, wrap);
-        height: 26.438rem;
+        min-height: 26.438rem;
+        max-height: 26.438rem;
         border-radius: 0 0 0.3rem 0.3rem;
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 
         &:hover {
             cursor: pointer;
             transition: all 0.2s;
             transform: scale(1.05);
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3);
+
+            @include smMobile {
+                transform: unset;
+                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            }
+
+            @include mobile {
+                transform: unset;
+                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            }
+
+            @include laptop {
+                transform: unset;
+                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            }
         }
 
         &__cover {
@@ -55,7 +156,9 @@
         }
 
         &__info {
-            @include flex(auto, column, wrap);
+            @include flex(auto, column, nowrap);
+            overflow-y: scroll;
+            overflow-x: hidden;
             max-height: 50%;
             padding: 1.5rem;
             gap: 1.625rem;
@@ -66,12 +169,19 @@
 .footer {
     &__h1 {
         font-size: 2rem;
-        margin-top: 5.313rem;
     }
 
     &__form {
         @include flex(auto, column, wrap);
         gap: 0.938rem;
+
+        @include smMobile {
+            // width: 100%;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
     }
 
     &__input {
@@ -84,6 +194,16 @@
         &:focus {
             outline: none;
             background-color: $pink;
+        }
+
+        @include smMobile {
+            min-width: unset;
+            max-width: 100%;
+        }
+
+        @include mobile {
+            min-width: unset;
+            max-width: 100%;
         }
     }
 
@@ -99,16 +219,32 @@
         &:focus {   
             background-color: #FDE3FD;
         }
+
+        @include smMobile {
+            max-width: 100%;
+        }
+
+        @include mobile {
+            max-width: 100%;
+        }
     }
 
     &__button {
         margin-bottom: 5rem;
+
+        @include smMobile {
+            margin-bottom: unset;
+        }
+
+        @include mobile {
+            margin-bottom: unset;
+        }
     }
 }
 
 // id's
 #cover_1 {
-    background-color: #FF6363;
+    background-color: red;
 }
 
 #cover_2 {
@@ -129,4 +265,21 @@
 
 #cover_6 {
     background-color: #6663FF;
+}
+
+// thanks.html
+.thanks {
+    &__main {
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    &__h1 {
+        text-align: center;
+    }
+
+    &__p {
+        text-align: center;
+    }
 }

@@ -3,11 +3,55 @@ header {
     max-height: 35rem;
     padding: 0 6rem 0 6rem;
     background-color: $purple-light;
+
+    @include smMobile {
+        @include flex(auto, row, wrap);
+        padding: 3.438rem 1.25rem 3.438rem 1.25rem;
+        max-height: 100%;
+        gap: 2rem;
+    }
+
+    @include mobile {
+        @include flex(auto, row, wrap);
+        padding: 3.438rem 1.25rem 3.438rem 1.25rem;
+        max-height: 100%;
+        gap: 2rem;
+    }
+
+    @include tablet {
+        @include flex(auto, row, wrap);
+        padding: 3.438rem 1.25rem 3.438rem 1.25rem;
+        max-height: 100%;
+        gap: 2rem;
+    }
+
+    @include laptop {
+        @include flex(auto, row, wrap);
+        padding: 3.438rem 1.25rem 3.438rem 1.25rem;
+        max-height: 100%;
+        gap: 2rem;
+    }
 }
 
 main {
     @include flex(auto, row, wrap);
     padding: 9.375rem 6.063rem 9.375rem 6.063rem;
+
+    @include smMobile {
+        padding: 3.438rem 1.25rem 3.438rem 1.25rem;
+    }
+        
+    @include mobile {
+        padding: 3.438rem 1.25rem 3.438rem 1.25rem;
+    }
+
+    @include tablet {
+        padding: 3.438rem 1.25rem 3.438rem 1.25rem;
+    }
+
+    @include laptop {
+        padding: 3.438rem 1.25rem 3.438rem 1.25rem;
+    }
 }
 
 footer {
@@ -15,5 +59,27 @@ footer {
     align-items: center;
     justify-content: center;
     background-color: $purple-light;
+    padding-top: 5.188rem;
     gap: 3.75rem;
+
+    @include smMobile {
+        padding: 5.188rem 1.25rem 3.438rem 1.25rem;
+        gap: 2.25rem;
+    }
+
+    @include mobile {
+        width: 100%;
+        padding: 5.188rem 1.25rem 3.438rem 1.25rem; 
+        gap: 2.25rem;
+    }
+
+    @include tablet { 
+        padding: 5.188rem 1.25rem 3.438rem 1.25rem; 
+        gap: 2.25rem;
+    }
+
+    @include laptop { 
+        padding: 5.188rem 1.25rem 3.438rem 1.25rem; 
+        gap: 2.25rem;
+    }
 }

@@ -52,7 +52,7 @@ h2 {
     font-family: 'Merriweather', serif;
 }
 
-p {
+p, a {
     color: $gray;
     font-size: 1.188rem;
     font-family: Lato, sans-serif;
@@ -76,4 +76,26 @@ textarea {
 *::placeholder {
     color: rgba(110, 114, 117, 0.74);
     font-family: Lato, sans-serif;
+}
+
+// scrollbar
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background-color: $purple;
+    &:hover {
+        background-color: $purple-2;
+    }
+    &:active {
+        background-color: $purple-3;
+    }
+}
+
+// selection
+::selection {
+    color: $white;
+    background: $purple;
 }
