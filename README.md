@@ -15,7 +15,7 @@ Codelândia: One Page is a single page website concept. It was created so that a
 Here is the deploy [link](https://desafio1-blog.vercel.app/).
 
 ### 🔖 Layout
-Here is the design [link](https://www.figma.com/file/Yb9IBH56g7T1hdIyZ3BMNO/Desafios---Codel%C3%A2ndia?node-id=3725%3A2) for that project.
+Here is the design [link](https://www.figma.com/file/Yb9IBH56g7T1hdIyZ3BMNO/Desafios---Codel%C3%A2ndia?node-id=3738%3A2) for that project.
 
 ### 📝 License
 This project is under the MIT license. See the [file](LICENSE) for more details.
