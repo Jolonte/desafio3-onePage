@@ -121,6 +121,10 @@
         }
     }
 
+    &__a {
+        text-decoration: none;
+    }
+
     &__card {
         @include flex(auto, column, wrap);
         min-height: 26.438rem;
@@ -159,7 +163,7 @@
         }
 
         &__info {
-            @include flex(auto, column, nowrap);
+            @include flex(none, column, nowrap);
             overflow-y: scroll;
             overflow-x: hidden;
             max-height: 50%;

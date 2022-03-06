@@ -1,31 +1,27 @@
 "use strict";
 
 // API UNSPLASH
-const url = 'https://api.unsplash.com/search/photos/?query=gift&per_page=6&client_id=v_a_QuzuHm-scFMvZQHkh3h9UmqEpIdylo8YBa7kDkQ';
+const url = 'https://api.unsplash.com/photos/random/?count=6&client_id=v_a_QuzuHm-scFMvZQHkh3h9UmqEpIdylo8YBa7kDkQ';
 
 
 // DOM
 const btn = document.querySelector('.header__button');
+const cardsLinks = document.querySelectorAll('.main__a');
 const cardsCover = document.querySelectorAll('.main__card__cover');
+const cardsP = document.querySelectorAll('.main__card__p');
 
 btn.addEventListener('click', () => {
   fetch(url) 
-
-  .then(response => {
-    // console.log(response);
-    if(response.ok === true) {
-      return response.json();
-    }
-    else {
-      alert(response.status);
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data);
+    for(let i = 0; i < data.length; i++){
+      cardsLinks[i].href = data[i].links.html;
+      cardsCover[i].style.backgroundImage = 'url('+data[i].urls.regular+')';
+      cardsP[i].innerHTML = `${data[i].description}<br><br>Downloads: ${data[i].downloads}<br><br>Likes: ${data[i].likes}`;
     }
   })
-
-  .then(data => {
-    const imageNodes = []
-    for(let i = 0; i < data.results.length; i++){
-      cardsCover[i].style.backgroundImage = 'url('+data.results[i].urls.raw+')';
-      console.log(data.results[i].urls.raw);
-    }
+  .catch((err) => {
+    alert(err);
   })
 })
