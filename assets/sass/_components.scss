@@ -153,6 +153,9 @@
         &__cover {
             flex: auto;
             max-height: 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
         }
 
         &__info {
@@ -162,6 +165,10 @@
             max-height: 50%;
             padding: 1.5rem;
             gap: 1.625rem;
+            
+            &::-webkit-scrollbar {
+                display: none;
+            }
         }
     }
 }
@@ -240,31 +247,6 @@
             margin-bottom: unset;
         }
     }
-}
-
-// id's
-#cover_1 {
-    background-color: red;
-}
-
-#cover_2 {
-    background-color: #63ECFF;
-}
-
-#cover_3 {
-    background-color: #F363FF;
-}
-
-#cover_4 {
-    background-color: #63FF73;
-}
-
-#cover_5 {
-    background-color: #FFDD63;
-}
-
-#cover_6 {
-    background-color: #6663FF;
 }
 
 // thanks.html
