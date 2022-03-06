@@ -23,6 +23,7 @@ $gray-dark: #2A2A2A;
     background-color: $color;
     color: $white;
     height: 3.125rem;
+    min-width: 9.688rem;
     font-size: 1.25rem;
     border-radius: 0.3rem;
     border: none;
@@ -33,6 +34,10 @@ $gray-dark: #2A2A2A;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {

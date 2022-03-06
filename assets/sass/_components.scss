@@ -122,13 +122,14 @@
     }
 
     &__a {
+        min-height: 26.438rem;
+        max-height: 26.438rem;
         text-decoration: none;
     }
 
     &__card {
         @include flex(auto, column, wrap);
-        min-height: 26.438rem;
-        max-height: 26.438rem;
+        height: 100%;
         border-radius: 0 0 0.3rem 0.3rem;
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 
@@ -163,7 +164,7 @@
         }
 
         &__info {
-            @include flex(none, column, nowrap);
+            @include flex(auto, column, nowrap);
             overflow-y: scroll;
             overflow-x: hidden;
             max-height: 50%;
