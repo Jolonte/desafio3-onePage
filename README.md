@@ -1,5 +1,5 @@
 <p align="center">
-  <img height="590em" src="assets/to_readme/thumbnail.png"
+  <img height="400em" src="assets/to_readme/thumbnail.png"
 </p>
 
 ### 🚀 Technologies
