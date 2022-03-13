@@ -1,4 +1,6 @@
-# desafio3-onepage
+<p align="center">
+  <img height="590em" src="assets/to_readme/thumbnail.png"
+</p>
 
 ### 🚀 Technologies
 - HTML5
